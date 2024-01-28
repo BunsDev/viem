@@ -58,7 +58,7 @@ export type EstimateL1FeeErrorType =
 const stubSignature = {
   r: numberToHex(maxInt256),
   s: numberToHex(maxInt256),
-  v: 28n,
+  yParity: 1,
 } as const satisfies Signature
 
 /**
