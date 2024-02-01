@@ -8,7 +8,7 @@ import {
   deployOffchainLookupExample,
   publicClient,
   publicClientMainnet,
-  publicClientSepolia,
+  sepoliaClient,
   walletClientWithAccount,
 } from '~test/src/utils.js'
 
@@ -112,7 +112,7 @@ test('args: blockNumber', async () => {
 
 test('args: blobs', async () => {
   // TODO: migrate to `publicClient` once 4844 is supported in Anvil.
-  const { data } = await call(publicClientSepolia, {
+  const { data } = await call(sepoliaClient, {
     account: sourceAccount.address,
     blobs: ['0x123'],
     maxFeePerBlobGas: parseGwei('20'),
